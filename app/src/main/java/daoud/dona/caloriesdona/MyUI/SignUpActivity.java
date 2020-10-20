@@ -1,10 +1,16 @@
-package daoud.dona.caloriesdona;
+package daoud.dona.caloriesdona.MyUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.google.firebase.auth.FirebaseAuth;
+
+import daoud.dona.caloriesdona.MyUtils.MyValidations;
+import daoud.dona.caloriesdona.R;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -29,7 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     ////////// 4.
-    private void checkForm() // hal habbahin sa7?
+    private void validateForm() // hal habbahin sa7?
     {
         String fName = etFirstName.getText().toString();
         String lName = etLastName.getText().toString();
@@ -38,6 +44,13 @@ public class SignUpActivity extends AppCompatActivity {
         String pass1 = etPassword1.getText().toString();
         String pass2 = etPassword2.getText().toString();
         String saveBtn = btnSave.getText().toString();
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                validateForm();
+
+            }
+        });
         boolean isOK = true;
         if (fName.length() < 2) {
             isOK = false;
@@ -48,7 +61,31 @@ public class SignUpActivity extends AppCompatActivity {
             isOK = false;
             etEmail.setError("Wrong E-mail Adress. Try Again!");
         }
+        if (!pass1.equals(pass2))
+        {
+            isOK=false;
+            etPassword2.setError("Passwords must be the same!");
+        }
+        else {
+            MyValidations myValidations=new MyValidations();
+            if(myValidations.validatePasword(pass1)== false)
+            {
+                isOK=false;
+                etPassword1.setError("Invalid Password");
+            }
+        }
+        if (isOK)// is ok== true
+        {
+            /**
+             * todo create account and return to sign in screen\ close this screen is successed
+             */
+            createNewAccount(email,pass1,pass2,fName,lName,phone);
+        }
 
+    }
+
+    private void createNewAccount(String email, String pass1, String pass2, String fName, String lName, String phone) {
+        FirebaseAuth auth=FirebaseAuth.getInstance(); //אחראית על רישום וכניסת משתמשים
     }
 }
 
