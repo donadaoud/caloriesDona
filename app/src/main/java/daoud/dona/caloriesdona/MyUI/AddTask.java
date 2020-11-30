@@ -1,8 +1,10 @@
-package daoud.dona.caloriesdona;
+package daoud.dona.caloriesdona.MyUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import daoud.dona.caloriesdona.R;
 
 public class AddTask extends AppCompatActivity {
 
