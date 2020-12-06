@@ -40,13 +40,13 @@
                     android:text="Upload" />
 
                 <Button
-                    android:id="@+id/btnDatePicher"
+                    android:id="@+id/btnDatePicker"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Pick A Date" />
 
                 <SeekBar
-                    android:id="@+id/seekBar"
+                    android:id="@+id/skbNessecry"
                     style="@style/Widget.AppCompat.SeekBar.Discrete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -58,6 +58,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Important" />
+
+                <SeekBar
+                    android:id="@+id/skbImportant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
                 <EditText
                     android:id="@+id/etSubject"
