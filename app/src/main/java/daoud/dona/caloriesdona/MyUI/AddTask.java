@@ -53,7 +53,6 @@ public class AddTask extends AppCompatActivity {
         skbNessecry= findViewById(R.id.skbNessecry);
         skbImportant= findViewById(R.id.skbImportant);
         btnDatePicker= findViewById(R.id.btnDatePicker);
-        tvImportant= findViewById(R.id.tvImportant);
 
         //4. listeners
         btnSaveTask.setOnClickListener(new View.OnClickListener() {
