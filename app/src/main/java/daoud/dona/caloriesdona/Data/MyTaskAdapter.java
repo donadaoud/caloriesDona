@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import daoud.dona.caloriesdona.Data.MyTask;
 import daoud.dona.caloriesdona.R;
 
 public class MyTaskAdapter extends ArrayAdapter<MyTask>
@@ -48,7 +47,7 @@ public class MyTaskAdapter extends ArrayAdapter<MyTask>
         TextView tvNecessary=v.findViewById(R.id.itemTvNecessery);
         TextView tvSubject=v.findViewById(R.id.itmTvSubject);
 
-        ImageButton btnDelete=v.findViewById(R.id.itmbtnDelete);
+        ImageButton btnDelete=v.findViewById(R.id.itmbtnAdd);
         ImageButton btnCall=v.findViewById(R.id.itmbtnEdit);
         ImageButton btnEdit=v.findViewById(R.id.itmbtnCall);
 

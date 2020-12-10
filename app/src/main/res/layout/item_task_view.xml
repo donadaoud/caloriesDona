@@ -1,6 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/itmTvTittle"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/itmTvImportant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/itmTvSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/itemTvNecessery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="20dp"
+        android:text="Nessecary"
+        app:layout_constraintStart_toStartOf="@+id/itmTvTittle"
+        app:layout_constraintTop_toBottomOf="@+id/itmTvTittle"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/itmTvImportant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="80dp"
+        android:text="Important"
+        app:layout_constraintEnd_toEndOf="@+id/itmTvTittle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/itmbtnAdd"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="277dp"
+        android:layout_marginEnd="41dp"
+        app:layout_constraintEnd_toStartOf="@+id/itmbtnEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/itmbtnEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="61dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itmbtnAdd"
+        app:layout_constraintEnd_toStartOf="@+id/itmbtnCall"
+        app:layout_constraintStart_toEndOf="@+id/itmbtnAdd"
+        app:layout_constraintTop_toTopOf="@+id/itmbtnAdd"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/itmbtnCall"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itmbtnEdit"
+        app:layout_constraintTop_toTopOf="@+id/itmbtnEdit"
+        app:srcCompat="@android:drawable/ic_menu_call"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
