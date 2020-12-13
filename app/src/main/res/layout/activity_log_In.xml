@@ -26,28 +26,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="E-mail"
-                android:inputType="textPersonName" />
+                android:hint="@string/e_mail"
+                android:inputType="textPersonName"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/edPassWord"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Password"
-                android:inputType="textPersonName" />
+                android:hint="@string/password"
+                android:inputType="textPersonName"
+                android:autofillHints="" />
 
             <Button
                 android:id="@+id/btnSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign In" />
+                android:text="@string/sign_in" />
 
             <Button
                 android:id="@+id/btnSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign Up" />
+                android:text="@string/sign_up" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
