@@ -10,10 +10,10 @@
         android:id="@+id/imageView"
         android:layout_width="402dp"
         android:layout_height="551dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-32dp"
-        tools:srcCompat="@tools:sample/backgrounds/scenic"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="-9dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <Button
         android:id="@+id/btnViewImage"
