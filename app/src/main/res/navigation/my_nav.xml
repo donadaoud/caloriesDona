@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/firstFragmentCal">
+
+    <fragment
+        android:id="@+id/firstFragmentCal"
+        android:name="daoud.dona.caloriesdona.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_secoundFrament"
+            app:destination="@id/secoundFramentAdd" />
+    </fragment>
+    <fragment
+        android:id="@+id/secoundFramentAdd"
+        android:name="daoud.dona.caloriesdona.SecoundFrament"
+        android:label="fragment_secound_frament"
+        tools:layout="@layout/fragment_secound_frament" >
+        <action
+            android:id="@+id/action_secoundFramentAdd_to_thirdFragmentSport"
+            app:destination="@id/thirdFragmentSport" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragmentSport"
+        android:name="daoud.dona.caloriesdona.ThirdFragmentSport"
+        android:label="fragment_third_sport"
+        tools:layout="@layout/fragment_third_sport" >
+        <action
+            android:id="@+id/action_thirdFragmentSport_to_firstFragmentCal"
+            app:destination="@id/firstFragmentCal" />
+    </fragment>
+</navigation>
